@@ -1,0 +1,30 @@
+<template>
+  <header>
+    <h1>{{ title }}</h1>
+    <Button text="Add Task" color="green"/>
+  </header>
+</template>
+
+<script lang="ts">
+import Button from '@/components/Button.vue';
+
+export default {
+  name: "Header",
+  components: {Button},
+  props: {
+    title: {
+      type: String,
+      default: 'Default header value'
+    },
+  },
+}
+</script>
+
+<style scoped>
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2em;
+}
+</style>
