@@ -16,7 +16,13 @@
       "id": 3,
       "text": "Grocery Shopping",
       "day": "March 3rd at 11:00",
-      "reminder": false
+      "reminder": true
+    },
+    {
+      "text": "Dental Appointment",
+      "day": "16th Nov at 14:30",
+      "reminder": false,
+      "id": 4
     }
   ]
 }
