@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <Header title="Task Tracker"/>
+    <AddTask @add-task="addTask" />
     <Tasks @delete-task="deleteTask" @toggle-reminder="toggleReminder" :tasks="tasks"/>
   </div>
 </template>
@@ -9,9 +10,11 @@
 import {Options, Vue} from 'vue-class-component';
 import Header from '@/components/Header.vue';
 import Tasks from '@/components/Tasks.vue';
+import AddTask from '@/components/AddTask.vue';
 
 @Options({
   components: {
+    AddTask,
     Header,
     Tasks
   },
@@ -29,6 +32,9 @@ import Tasks from '@/components/Tasks.vue';
     toggleReminder(id: number): void {
       this.tasks = this.tasks.map((task: any) =>
           task.id === id ? {...task, reminder: !task.reminder} : task)
+    },
+    addTask(task: any) {
+      this.tasks = [...this.tasks, task]
     }
   },
   created() {
