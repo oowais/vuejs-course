@@ -16,7 +16,7 @@
   </form>
 </template>
 
-<script lang="ts">
+<script>
 export default {
   name: "AddTask",
   data() {
@@ -27,7 +27,7 @@ export default {
     }
   },
   methods: {
-    onSubmit(e: Event) {
+    onSubmit(e) {
       e.preventDefault()
 
       if (!this.text){

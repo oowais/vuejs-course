@@ -8,14 +8,14 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 
 export default {
   name: "Task",
   props: {
     task: Object,
   }, methods: {
-    onDelete(id: number): void {
+    onDelete(id) {
       this.$emit('delete-task', id);
     },
   },

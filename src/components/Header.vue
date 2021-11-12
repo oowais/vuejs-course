@@ -6,7 +6,7 @@
   </header>
 </template>
 
-<script lang="ts">
+<script>
 import Button from '@/components/Button.vue';
 
 export default {

@@ -2,7 +2,7 @@
   <button @click="onClick()" :style="{background: color}" class="btn">{{ text }}</button>
 </template>
 
-<script lang="ts">
+<script>
 export default {
   name: "Button",
   props: {
@@ -10,7 +10,7 @@ export default {
     color: String,
   },
   methods: {
-    onClick(): void {
+    onClick() {
       this.$emit('btn-click')
     }
   },
